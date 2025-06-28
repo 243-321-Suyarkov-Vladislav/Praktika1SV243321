@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ваш помощник в магазине: Сканируй, слушай, выбирай</title>
+<link rel="stylesheet" href="styleland.css">
+</head>
+<body>
+
+<header>
+  <h1>Ваш помощник в магазине</h1>
+  <p>Сканируй, слушай, выбирай — легко и удобно!</p>
+</header>
+
+<div class="slider-container" aria-label="Основные функции приложения">
+  <div class="slide active" role="group" aria-roledescription="slide" aria-label="Сканирование текста и озвучивание вслух">
+    <img src="https://i.insider.com/5bd37983dde8675f8648ea96" alt="Сканирование текста на упаковке" />
+    <h2>Сканирование текста и озвучивание вслух</h2>
+    <p>Наведите камеру на упаковку товара, и приложение прочитает всю информацию вслух. Это позволит быстро получить нужные данные без необходимости читать мелкий текст.</p>
+  </div>
+  <div class="slide" role="group" aria-roledescription="slide" aria-label="Распознавание продуктов по фотографии с высокой точностью">
+    <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=80" alt="Распознавание продукта по фото" />
+    <h2>Распознавание продуктов по фотографии с высокой точностью</h2>
+    <p>Сделайте фото товара, и приложение мгновенно определит его, предоставив подробную информацию и помогая сделать правильный выбор.</p>
+  </div>
+  <div class="slide" role="group" aria-roledescription="slide" aria-label="Возможности для слепых и слабовидящих">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Доступность для слепых и слабовидящих" />
+    <h2>Возможности для слепых и слабовидящих</h2>
+    <p>Интуитивный интерфейс и голосовое управление разработаны специально для пользователей с нарушениями зрения, чтобы сделать покупки максимально комфортными и независимыми.</p>
+  </div>
+
+  <div class="slider-controls">
+    <button aria-label="Предыдущая функция" id="prevBtn">&#10094;</button>
+    <button aria-label="Следующая функция" id="nextBtn">&#10095;</button>
+  </div>
+</div>
+
+<section class="advantages" aria-label="Преимущества приложения">
+  <h2>Преимущества приложения</h2>
+  <ul>
+    <li>Экономит время при выборе и покупке товаров</li>
+    <li>Помогает ориентироваться в магазине без посторонней помощи</li>
+    <li>Делает покупки доступными для людей с нарушениями зрения</li>
+    <li>Интуитивно понятный и простой в использовании интерфейс</li>
+    <li>Голосовое управление для удобства и безопасности</li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2024 Ваш помощник в магазине. Все права защищены.
+</footer>
+
+<script>
+  (function() {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+  })();
+</script>
+
+</body>
+</html>

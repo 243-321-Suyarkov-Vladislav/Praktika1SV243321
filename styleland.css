@@ -1,0 +1,130 @@
+﻿ body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .slider-container {
+      position: relative;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .slide {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide img {
+      max-width: 100%;
+      height: 220px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: #eee;
+    }
+    .slide h2 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: #34495e;
+    }
+    .slide p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #555;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .slider-controls button {
+      pointer-events: all;
+      background: rgba(44, 62, 80, 0.7);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      transition: background 0.3s;
+    }
+    .slider-controls button:hover {
+      background: rgba(44, 62, 80, 0.9);
+    }
+    section.advantages {
+      max-width: 700px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #2c3e50;
+    }
+    section.advantages h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+    section.advantages ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    section.advantages ul li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+    section.advantages ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 1rem;
+      color: #777;
+    }
+    @media (max-width: 640px) {
+      .slider-container {
+        max-width: 90vw;
+      }
+      section.advantages {
+        padding: 20px;
+        max-width: 90vw;
+      }
+    }
